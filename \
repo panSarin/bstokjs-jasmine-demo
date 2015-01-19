@@ -1,0 +1,20 @@
+describe('BstokJS', function() {
+  var bstok_js;
+  beforeEach(function(){
+    bstok_js = new BstokJs();
+  });
+
+  it('should be possible to add new member', function(){
+    var member = new Person('Adam');
+    bstok_js.add_member(member);
+    expect(bstok_js.members[0]).to_equal(member);
+  });
+
+  it('should be possible to add few members', function(){
+    var member1 = new Person('Adam');
+    var member2 = new Person('Artur');
+    bstok_js.add_member(member);
+    expect(bstok_js.members.length()).to_equal(2);
+  });
+
+});
